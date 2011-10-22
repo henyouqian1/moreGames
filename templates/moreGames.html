@@ -1,0 +1,31 @@
+<!doctype html>
+<title>More games</title>
+<link rel=stylesheet type=text/css href={{cssfile}}>
+<script type="text/javascript" src="/static/jquery-1.6.4.min.js"></script>
+<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4.min.js"></script-->
+<script type=text/javascript src=/static/moreGames.js></script>
+<div class=frame>
+{% for game in games %}
+	<table>
+		<tr>
+			<td class=icon>
+				<img class=gameIcon src=/static/img/{{ game.icon }} />
+			</td>
+			<td class=desc>
+				<h2>{{ game.title }}</h2>
+				<p>{{ game.text|safe }}</p>
+			</td>
+			<td class=button>
+				{% if game.paidLink %}
+					<a class=button href={{ game.paidLink }}><span>${{ game.price }} {{ paidLable|safe }}</span></a>
+				{% endif %}
+				{% if game.freeLink %}
+					<a class="button freeButton" href={{ game.freeLink }}>{{freeLable}}</a>
+				{% endif %}
+			</td>
+		</tr>
+	</table>
+{% else %}
+	<li><em>Unbelievable.  No entries here so far</em></li>
+{% endfor %}
+</div>

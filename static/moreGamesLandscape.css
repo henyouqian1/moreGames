@@ -1,0 +1,68 @@
+body{
+	margin:0px;
+	background-color:gray;
+}
+div.frame{
+	width:480px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+}
+table{
+	width:480px;
+	height:130px;
+	border-spacing:0px;
+}
+table.even{
+	background-color:#dadada;
+}
+td{
+	vertical-align:top;
+	margin:0px;
+	padding:0px;
+}
+td.icon{
+	width:119px;
+}
+img.gameIcon{
+    width:100px;
+    height:100px;
+    margin:14px 0px 0px 19px;
+}
+td.desc{
+	width:232px;
+}
+td h2{
+	margin:14px 0px 0px 18px;
+	font:normal bold 18px arial,sans-serif;
+}
+td p{
+	margin:2px 0px 0px 19px;
+	font:normal 13px arial,sans-serif;
+}
+a.button{
+	background-image:url(img/button.png);
+	width:105px;
+	height:43px;
+	display:block;
+	background-position:0px 0px;
+	margin:5px 0px 0px 10px;
+	text-align:center;
+	text-decoration: none;
+	font:normal 12px Verdana,arial,sans-serif;
+	color:white;
+	line-height:1em;
+}
+a.button:active{
+	background-position:0px -44px;
+}
+a.bigButton{
+	margin:18px 0px 0px 10px;
+}
+a.freeButton{
+	line-height:43px;
+}
+a span{
+	position:relative;
+	top:9px;
+}
